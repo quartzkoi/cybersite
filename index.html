@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire me?</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">
+            <img id="popupImage" src="profile.jpg" alt="profile image" onclick="spinImage()">
+            Trent Smith, Student Applicant
+        </h1>
+            <p class="text-center">Web Developer, Backend, and Constant Learner<br>
+            tsmith64@wsutech.edu; (999)867-5309</p>
+
+    <div class="resume-section">
+        <h2 class="text-center">Personal Experience</h2>
+        <div class="grid-container">
+        <div class="grid-item">
+            <h3>Work History</h3>
+            <p>
+                <li>Junior Cloud Engineer</li>
+                <li>ABC Tech, San Francisco, CA</li>
+                <ul>
+                    <li>Assisted in maintenance of cloud infrastructure</li>
+                    <li>Collaborated with senior engineers on various projects</li>
+                    <li>Provided support for cloud-based applications to clients</li>
+                </ul>
+                <li>Cloud Support Specialist</li>
+                <li>XYZ Cloud Co. Seattle, WA</li>
+                <ul>
+                    <li>Responded to customer inquiries and resolved platform issues</li>
+                    <li>Optimized cloud resources for performance</li>
+                </ul>
+            </p>
+            <h3>Gig Work</h3>
+            <p>
+                <li>Freelance Cloud Consultant</li>
+                <ul>
+                    <li>Assisted several local businesses in migrating to cloud infrastructure</li>
+                    <li>Implemented tight security practices for cloud environments</li>
+                    <li>Provided training to staff on cloud technologies</li>
+                </ul>
+                <li>Cloud Project Intern</li>
+                <ul>
+                    <li>Supported cloud projects through research and documentation</li>
+                    <li>Assisted in the execution of cloud migration plans</li>
+                </ul>
+            </p>
+        </div>
+        <div class="grid-item">
+            <h3>Personal Life</h3>
+            <p>In my free time, I enjoy long walks into nature, and documenting my findings. I have been trying to study up on local
+                fauna and flora to get a better grasp of the world around me. I recently invested in a pair of binoculars for birdwatching.
+                When I'm not busy with school, work, or gazing on the world around me, I enjoy immersing myself into cyberspace, learning about
+                the technologies we all use on a  daily basis, and understanding their mechanics down to the bare metal. Author Arthur C. Clarke
+                once remarked that “Any sufficiently advanced technology is indistinguishable from magic,” and I for one could not agree more; framing
+                my quest for knowledge in this field as a "study of technomancy" really makes the struggle seem that much cooler.
+            </p>
+        </div>
+        <div class="grid-item">
+            <h3>Education</h3>
+            <p>
+                <li>Kansas City High School - 2016-2020</li>
+                <li>Wichita State University 2020-2022</li>
+                <li>WSU Tech 2022-2024</li>
+                <h4>Volunteer Work</h4>
+                <li>KC Pet Project</li>
+                <ul>
+                    Local animal shelter, walked, fed, and entertained lost/stray dogs
+                </ul>
+                <li>NourishKC</li>
+                <ul>
+                    Worked at a food bank cooking and delivering meals to those in need
+                </ul>
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="resume-section">
+        <h2 class="text-center">Testimonials</h2>
+        <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
+                Kael O'Neill, Mentor
+                </button>
+            </div>
+            <div id="collapseOne" class="collapse">
+            <div class="card-body">
+                "I've enjoyed having Trent around to help, he's clearly motivated to learn, and apply what he knows to fix any problems,
+                rarely without making new ones!" <br><br>
+                (123) 456-7890; KO3378@outlook.com
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-controls="collapseTwo">
+                Colin Leftwich, Coworker
+                </button>
+            </div>
+            <div id="collapseTwo" class="collapse">
+            <div class="card-body">
+                "Trent is a hard worker, and a pleasure to be around, any time we would come across an issue that he didn't immediately
+                have a solution for, he would not stop seeking answers until he solved our problem!" <br><br>
+                (987) 654-3210; CLDEV22098@protonmail.com
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseThree">
+                Ian Christopher, Coworker
+                </button>
+            </div>
+            <div id="collapseThree" class="collapse">
+            <div class="card-body">
+                "Trent was a big help in a few projects that I had worked on with him, he's very open to comments and questions
+                about whatever he's working on, he knows he's able to make mistakes and learn from them"<br><br>
+                (975) 310-8642; 9910ICMTG@gmail.com
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <h3>Questions? Answers? Looking for help? Contact me!</h3>
+        <form id="educationForm" onsubmit="showPopup()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Please leave your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" placeholder="and a good contact email" required>
+        </div>
+        <div class="form-group">
+            <label>What is a good time to contact you?</label>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="contact" value="0" required>
+            <label class="form-check-label">
+                Mornings
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="contact" value="1" required>
+            <label class="form-check-label">
+                Afternoons
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="contact" value="2" required>
+            <label class="form-check-label">
+                Evenings
+            </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="availability">Are you available on weekends?</label>
+            <select class="form-control" id="availability" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="maybe">Depends, I suppose, you're free to try</option>
+            </select>
+        </div>        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
+              
+</body>
+</html>
